@@ -122,6 +122,10 @@ The `subscriber.sh` script listens to the `test_queue` queue and prints messages
    [x] Received 'Hello, RabbitMQ! Sun May 11 07:53:27 PM +06 2025'
    ```
 
+### Test Image
+![Rabbitmq Pub/Sub](./image.png)
+
+
 ### Stopping the Scripts
 
 To stop the scripts, press `CTRL+C` in the terminal where they are running.
