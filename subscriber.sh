@@ -1,8 +1,8 @@
 #!/bin/bash
 # filepath: /home/rafi/projects/docker-scripts/rabbitmq-docker/subscriber.sh
 
-RABBITMQ_USER="user"
-RABBITMQ_PASS="root"
+RABBITMQ_USER="guest"
+RABBITMQ_PASS="guest"
 RABBITMQ_HOST="localhost"
 QUEUE_NAME="test_queue"
 

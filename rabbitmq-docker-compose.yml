@@ -4,12 +4,15 @@ services:
     container_name: rabbitmq
     restart: unless-stopped
     ports:
+      - "1883:1883" # MQTT
       - "5672:5672" # RabbitMQ default port
       - "15672:15672" # Management web UI port
+      - "1885:15675" # MQTT over websocket
+    command: "/bin/bash -c \"rabbitmq-plugins enable --offline rabbitmq_mqtt rabbitmq_web_mqtt rabbitmq_amqp1_0; rabbitmq-server\""
     environment:
       RABBITMQ_HOST: '%'
-      RABBITMQ_DEFAULT_USER: user
-      RABBITMQ_DEFAULT_PASS: root
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
     volumes:
       - rabbitmq_data:/var/lib/rabbitmq
     networks:
